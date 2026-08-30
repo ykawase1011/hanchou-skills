@@ -13,7 +13,9 @@ upstream tool. Before running a command, identify the source of truth.
 | Task, Epic, Decision, dependency, ready queue | `bd` |
 | Agent, pane, workspace, worktree, liveness | `herdr` |
 | Ordinary `new-agent` recurring job and history | `herdr-automations` |
-| Profile setup, health, UI opening | `hanchou` |
+| Human-owned workspace authorization | `hanchou onboard` |
+| Profile setup, service launch, health, status UI | `hanchou` |
+| Human-owned project authorization inspection | `hanchou project` |
 | Usage snapshot and provider routing | `hanchou usage` / `hanchou route` |
 | Relay Inbox, retry, acknowledgement | `hanchou relay` / `hanchou inbox` |
 | User-facing report lifecycle | `hanchou delivery` |
@@ -23,6 +25,14 @@ upstream tool. Before running a command, identify the source of truth.
 Do not invent a Hanchou wrapper when one upstream system already owns the
 operation. Use `--json` whenever a supported command is consumed by an agent or
 script, and parse returned IDs instead of deriving them from names or UI order.
+
+## Human-owned onboarding boundary
+
+`hanchou onboard <profile>` is a read-only plan. Only a human in an interactive
+terminal outside Herdr may run `hanchou onboard <profile> --yes`, because that
+command creates the dedicated workspace and expands the machine-local project
+authorization registry. Managed Agents must never run it, edit that registry,
+or reproduce the authorization change with filesystem commands.
 
 ## Codex sandbox boundary
 
@@ -35,8 +45,10 @@ command, or broaden its target.
 ## Implemented Hanchou surfaces
 
 ```text
-plan / apply / status / doctor / start-orchestrator / open
+onboard / plan / bootstrap / apply / launch / status / doctor
+start-orchestrator / dashboard serve / dashboard snapshot / open
 render-agents / handoff
+project list / project show / project resolve / project doctor
 usage set / usage show
 route resolve
 relay emit / relay recover / relay dispatch
@@ -46,7 +58,10 @@ execution dispatch / inspect / reconcile
 ```
 
 `execution dispatch` accepts only a ready Leaf Bead with no existing execution
-owner. It pins the validated repository `HEAD`, claims the Bead, and merges only
+owner. It first revalidates the Bead's project identity and canonical repository
+against the human-owned machine-local deny-by-default registry. Managed Agents
+must never edit or broaden that registry. It then pins the validated repository
+`HEAD`, claims the Bead, and merges only
 the execution-owned metadata fields. If Codex first-run trust leaves the Agent
 blocked, dispatch returns `awaiting_ready`; after the user accepts trust and the
 Agent becomes idle/done, run `execution reconcile <id>` to deliver the prompt
