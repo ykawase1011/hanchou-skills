@@ -1,5 +1,11 @@
-.PHONY: check
+.PHONY: manifest manifest-check check
+
+manifest:
+	python3 scripts/manifest.py generate
+
+manifest-check:
+	python3 scripts/manifest.py check
 
 check:
 	python3 scripts/validate.py
-	shasum -a 256 -c MANIFEST.sha256
+	python3 scripts/manifest.py check
