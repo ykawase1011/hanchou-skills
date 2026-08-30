@@ -1,13 +1,16 @@
-76179766d53d982be4e2a9929453ce8bf3936e0421417e2cbc4c6574a8994c90  ./.github/workflows/ci.yml
+8063a98806126414bea477c4d2467c099032e7e0d0c1e5dba301ef37fb90b36e  ./.github/workflows/ci.yml
 9620f3867c9a5e40583d951fcd302dd3a55611e19a2dbcbdbeb4683b68fc39c1  ./.gitignore
 75cd7e4b9412931e873e008aec46f528e56b3ff1f5f0b0daeaa4f7c58aabaddc  ./AGENTS.md
 c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4  ./LICENSE
-8699aed3e39f31dbf4af8d78330bca1c7e658d08a00bc820168f0373179e4d17  ./Makefile
-6d88fe47ffbf0a8647f956d4fa15ddae0772019ce5c2b0b84419c5165d417ec4  ./README.md
+bbfbfb1af2da89d03625f289a990eb6a8e35b5a31a0e316bcfcde570334accfb  ./Makefile
+1e5264cf8f0051768bec961155f26af263c876159f95e3d4ce58bac0e1be3736  ./README.md
 1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9  ./VERSION
 8e856bb5e306521aa504da1e269dc248e6d12471a74d4195b430159a20c643e0  ./docs/PRIVATE_OVERLAYS.md
-f630a2e6de6d1932e5007445ae64c95d3a60964b9c1d0976d2e6f82ccc5f0777  ./scripts/manifest.py
-be895bacf319fcab7734104f583f7318970e1844b862f4adfc8d8dca92196e00  ./scripts/validate.py
+ce98956f06283b132562f74ba10fe88b2c9569b36439cbe7d3585c8a15a6d1fc  ./mise.toml
+4f55b2ca98bda7fead185fbf40418343215da332663feb5fbfac0aa39dc7888c  ./package-lock.json
+69ceb26c3c69e32bbc0c11df99512bc855813236515bcf52f85cf10d20c3562f  ./package.json
+1302f0ecae1c77da891cc44c4a571c5bbd4bd17400bbae86776930e11652a521  ./scripts/manifest.ts
+e9d21c5905420c8dedfaa377eec323fe5ccadf563b11a4efc54f7702be83d70c  ./scripts/validate.ts
 c518655c3df3977b939dbdcd3e2e9a4f3ac898c949092ad2f79373a5710c3fdb  ./skills/hanchou-cli/SKILL.md
 2fef5eb39696f2841728defa7db461277b9db076f8ac9c92d75c0408feb0dc6e  ./skills/hanchou-editor/SKILL.md
 46b042dbab1f5d0d27a64c7412ad658a9e4dda1f27a458973bafad5485ddda71  ./skills/hanchou-mission-lead/SKILL.md
@@ -20,3 +23,4 @@ a7498b1caef2e3bd0cb52d541f1c2907bee3d63e59c9f54ac7cceabef8f20e67  ./skills/hanch
 2437560e32a2d66e02cadbec5a73cebee10dd5db013796afcfb1ce2493aae106  ./skills/hanchou-usage-routing/SKILL.md
 be958072ce5222c11e6aab51a431095434c5219b6e5bd8410b14108f153c3d6e  ./skills/hanchou-worker/SKILL.md
 ebbc3c1584846e3a7ab23112c4f754389ba69f724f1694817ef14f601a66b42d  ./skills/hanchou-writer/SKILL.md
+123194ea5a786ab280d4bd50166919f200d542850a74d055ff3a00392b504c96  ./tsconfig.json

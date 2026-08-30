@@ -58,6 +58,11 @@ Hanchou-owned/cross-system hanchou
 
 ## Validation
 
+Node.js 22 is pinned by `mise.toml`. Install the development toolchain once,
+then run the type-safe, dependency-free runtime checks:
+
 ```bash
+mise install
+mise exec -- npm ci
 make check
 ```

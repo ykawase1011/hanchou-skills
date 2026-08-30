@@ -1,11 +1,14 @@
-.PHONY: manifest manifest-check check
+.PHONY: manifest manifest-check typecheck check
 
 manifest:
-	python3 scripts/manifest.py generate
+	mise exec -- node --experimental-strip-types scripts/manifest.ts generate
 
 manifest-check:
-	python3 scripts/manifest.py check
+	mise exec -- node --experimental-strip-types scripts/manifest.ts check
 
-check:
-	python3 scripts/validate.py
-	python3 scripts/manifest.py check
+typecheck:
+	mise exec -- npm run typecheck
+
+check: typecheck
+	mise exec -- node --experimental-strip-types scripts/validate.ts
+	mise exec -- node --experimental-strip-types scripts/manifest.ts check
