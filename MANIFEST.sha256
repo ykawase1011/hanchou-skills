@@ -11,7 +11,7 @@ ce98956f06283b132562f74ba10fe88b2c9569b36439cbe7d3585c8a15a6d1fc  ./mise.toml
 69ceb26c3c69e32bbc0c11df99512bc855813236515bcf52f85cf10d20c3562f  ./package.json
 1302f0ecae1c77da891cc44c4a571c5bbd4bd17400bbae86776930e11652a521  ./scripts/manifest.ts
 e9d21c5905420c8dedfaa377eec323fe5ccadf563b11a4efc54f7702be83d70c  ./scripts/validate.ts
-b4d12e1fdba09bc4e2ba8ea0b736975ad71f682efb24cf54bcaf973cc1cfeb2e  ./skills/hanchou-cli/SKILL.md
+e35063e0212d9b652e33b975470f2ec646b1bdac5e814847e7d28641dada0b62  ./skills/hanchou-cli/SKILL.md
 2fef5eb39696f2841728defa7db461277b9db076f8ac9c92d75c0408feb0dc6e  ./skills/hanchou-editor/SKILL.md
 46b042dbab1f5d0d27a64c7412ad658a9e4dda1f27a458973bafad5485ddda71  ./skills/hanchou-mission-lead/SKILL.md
 2e5e811a38d6e870223a1e61c29b9a44b05fa486d4d2e79d4873cf6297c6305a  ./skills/hanchou-orchestrator/SKILL.md

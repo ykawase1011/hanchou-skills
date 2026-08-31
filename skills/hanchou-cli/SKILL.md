@@ -79,6 +79,23 @@ is shutting down. Never interpret a transient `server_unavailable` or shutdown
 response as an absent Agent, and do not create a replacement workspace in that
 state. Wait for bootstrap/reload to settle and retry the bounded Hanchou command.
 
+Orchestrator startup is serialized per profile. Hanchou records the exact
+workspace/tab/pane/terminal binding before Agent startup and reuses it after a
+blocked start, failure, or `/exit`. Never delete Orchestrator workspaces from
+`launch` or `start-orchestrator`. If unbound legacy `00-orchestrator` spaces are
+reported, fail closed unless a live named Agent exactly matches the configured
+kind, label, single-pane/no-worktree shape, Core cwd, and all opaque IDs. Only
+that exact migration may be bound and kept. Open the full Herdr TUI, preserve
+the live named `orchestrator`, and let the human close only verified empty rows
+with `Ctrl+B` then `Shift+D`.
+
+`hanchou open orchestrator` focuses the Agent or its recorded single-pane
+workspace and opens the ordinary full Herdr client; it must not use exclusive `agent attach`. Full Herdr
+clients can coexist. A direct `agent attach`/`terminal attach` and a Herdrm
+attach to the same pane have one writable owner, so detach the earlier direct
+view with `Ctrl+B` then `q`. `Another client took this pane over` means direct
+ownership moved; it does not prove that the Agent stopped.
+
 `execution dispatch` accepts only a ready Leaf Bead with no existing execution
 owner. It first revalidates the Bead's project identity and canonical repository
 against the human-owned machine-local deny-by-default registry. Managed Agents
