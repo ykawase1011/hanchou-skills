@@ -10,7 +10,10 @@ or confidential project data in Skills.
 
 ## Recommended installation
 
-Use `hanchou apply` and the profile's `skills.toml`. It installs control Skills
+Use the profile-local `./bin/hanchou bootstrap` (or its bounded `apply`) and the
+profile's `skills.toml`. A managed instance keeps this repository as
+`~/HanchouWorkspace/<profile>/hanchou-skills`, beside the managed Core and
+outside the target `repositories/` shelf. It installs control Skills
 at project scope, bounded worker Skills at global scope, and Writer/Editor only
 to Codex.
 
