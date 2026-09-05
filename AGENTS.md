@@ -1,6 +1,4 @@
+# Archived repository
 
-# hanchou-skills instructions
-
-Keep every Skill provider-neutral where possible and usable from both Codex and
-Claude Code. Skills contain procedures and policy, never credentials or private
-company/personal facts. Breaking changes require a versioned release.
+Do not add Hanchou v3 source here. The canonical skill lives in
+`ykawase1011/hanchou`. Preserve this repository as a deprecated pointer.
